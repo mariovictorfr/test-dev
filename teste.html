@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Teste Estadão</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/my-style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <script src="js/app.js"></script>
+
+</head>
+
+<body onload="getAll()">
+    <div class="container">
+        <div class="box">
+            <div class="box-header">
+                <h1>Teste Estadão</h1>
+                <p>Micro API - CRUD de Carros</p>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <form id="form" class="form-center" action="javascript:void(0);" onsubmit="add()">
+                    <h3 id="form-title">Cadastrar Novo Carro</h3>
+                    <input id="id" type="hidden" class="input">
+                    <div class="input-group">
+                        <label for="nome">Nome</label>
+                        <input id="nome" type="text" class="input" placeholder="Digite o nome do carro" required>
+                    </div>
+                    <!-- /.input-group -->
+                    <div class="input-group">
+                        <label for="marca">Marca</label>
+                        <select id="marca" type="text" class="input" required>
+                            <option value="" selected="selected">Selecione uma marca</option>
+                            <option value="Chevrolet">Chevrolet</option>
+                            <option value="Fiat">Fiat</option>
+                            <option value="Ford">Ford</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="Volkswagen">Volkswagen</option>
+                        </select>
+                    </div>
+                    <!-- /.input-group -->
+                    <div class="input-group">
+                        <label for="preco">Preço</label>
+                        <input id="preco" type="number" class="input" placeholder="Digite o preço do carro" required>
+                    </div>
+                    <!-- /.input-group -->
+                    <button class="btn bg-primary">Cadastrar</button>
+                    <button type="reset" class="btn" onclick="document.getElementById('form-title').innerText = 'Cadastrar Novo Carro'">Cancelar</button>
+                </form>
+                <!-- /form -->
+                <h3>Tabela de Carros</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>Nome</td>
+                                <td>Marca</td>
+                                <td>Preço</td>
+                                <td>Opções</td>
+                            </tr>
+                        </thead>
+                        <tbody id="carros">
+                        </tbody>
+                    </table>
+                    <!-- /table -->
+                </div>
+                <!-- /.table-container -->
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <div class="text-muted">Mario Victor Freire Rovaris</div>
+            </div>
+            <!-- /.box-footer -->
+        </div>
+        <!-- /.box -->
+    </div>
+    <!-- /.container -->
+    <div class="alert" id="alert">
+        Teste
+    </div>
+    <!-- /#alert -->
+</body>
+<!-- /body -->
+
+</html>
